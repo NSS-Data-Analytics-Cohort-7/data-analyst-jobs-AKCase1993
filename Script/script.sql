@@ -5,7 +5,11 @@ From data_analyst_jobs;
 Select * 
 from data_analyst_jobs
 Limit 10
---Question 2: XTO Land Data Analyst
+--Question 2: ExxonMobil
+
+Select COUNT(location)
+from data_analyst_jobs
+Where location = 'TN' 
 
 Select COUNT(location)
 from data_analyst_jobs
@@ -27,7 +31,8 @@ Where review_count Between 500 AND 1000
 Select location, Avg(star_rating) AS avg_rating
 from data_analyst_jobs
 Group By location
---Question 6: KS
+Order by Avg(star_rating) Desc
+--Question 6: NE
 
 Select distinct title
 From data_analyst_jobs
@@ -48,7 +53,8 @@ Select company, AVG(star_rating) AS avg_rating
 From data_analyst_jobs
 Where review_count > 5000
 Group By company
---Question 10: General Motors at 4.1999998090000000
+Order By Avg(star_rating) Desc
+--Question 10: 4.1999998090000000
 
 Select count(Distinct(title))
 From data_analyst_jobs
